@@ -11,5 +11,14 @@ public class ShapeTest
         }
         return result;
     }
+    static List<Shape> findShapesByColorNArea(List<Shape> shapes, String color, double area){
+        List<Shape> result = new ArrayList<>();
+        for(Shape s : shapes) {
+            if ((color == s.getColor()) && (s.getArea() <= area))
+                result.add(s);
+        }
+        return result;
+    }
+
 
 }
