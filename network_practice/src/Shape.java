@@ -1,8 +1,5 @@
-import java.sql.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.*;
 
 public class Shape {
     private String type;
@@ -14,28 +11,6 @@ public class Shape {
         this.type = type;
         this.color = color;
         this.area = area;
-    }
-
-    public String getColor() {
-        return color;
-    }
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public void setArea()
-    {
-        this.area = area;
-    }
-    public Double getArea() {
-        return area;
-    }
-
-    public String getType() {
-        return type;
-    }
-    public void setType(String type) {
-        this.type = type;
     }
 
     public String toString(){
