@@ -3,21 +3,23 @@ import java.util.*;
 
 public class ShapeTest
 {
-    static List<Shape> findShapesByType(List<Shape> shapes, String type) {
-        List<Shape> result = new ArrayList<>();
-        for(Shape s: shapes){
+    static List<Shape> findShapes1(List<Shape> shapes, String type, String color, Double area){
+        List<Shape> result1 = new ArrayList<>();
+        List<Shape> result2 = new ArrayList<>();
+
+        for(Shape s : shapes) {
             if (type == s.getType())
-                result.add(s);
+                result1.add(s);
         }
-        return result;
-    }
-    static List<Shape> findShapesByColorNArea(List<Shape> shapes, String color, double area){
-        List<Shape> result = new ArrayList<>();
+        System.out.println(type + " : " + result1);
+
         for(Shape s : shapes) {
             if ((color == s.getColor()) && (s.getArea() <= area))
-                result.add(s);
+                result2.add(s);
         }
-        return result;
+        System.out.println(color + " 도형(면적<=12.0) : " + result2);
+
+        return shapes;
     }
 
 
