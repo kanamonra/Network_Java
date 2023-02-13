@@ -11,7 +11,7 @@ public class SimpleEchoServer {
         try {
             System.out.println("Waiting for connection.....");
             // InetAddress localAddress = InetAddress.getLocalHost();
-            try (Socket clientSocket = new Socket("165.246.115.110", 6000);
+            try (Socket clientSocket = new Socket("165.246.115.165", 9900);
                  PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
                  BufferedReader br = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
                     System.out.println("Connected to server");
