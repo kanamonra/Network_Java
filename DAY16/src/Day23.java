@@ -1,24 +1,35 @@
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
-import java.util.Collections;
-import java.util.Enumeration;
+import java.net.UnknownHostException;
 
-// check network address
-// Java network interface -> test for get Inet address, name, display, interface
+// Getting multiple Mac address
+
 public class Day23 {
-    public static void main(String[] args) {
+    public static String getMacIdentifier(NetworkInterface network){
+        StringBuilder identifier = new StringBuilder();
         try {
-            Enumeration<NetworkInterface> interfaceEnum = NetworkInterface.getNetworkInterfaces();
-            System.out.print("Name Display name\n");
-            for (NetworkInterface element : Collections.list(interfaceEnum)) {
-                System.out.printf("%-8s %-32s\n", element.getName(), element.getDisplayName());
-                Enumeration<InetAddress> addresses = element.getInetAddresses();
-                Collections
-                        .list(addresses)
-                        .forEach((inetAddress) -> System.out.printf("*IP: %s\n", inetAddress));
+            byte[] macBuffer = network.getHardwareAddress();
+            if (macBuffer != null) {
+                for (int i = 0; i < macBuffer.length; i++) {identifier.append(String.format("%02X%s",macBuffer[i], (i < macBuffer.length - 1) ? "-" : ""));
+                }
+            } else {
+                return "---";
             }
-        } catch (SocketException e) {
+        } catch (SocketException ex) {
+            ex.printStackTrace();
+        }
+        return identifier.toString();
+    }
+
+    public static void main(String[] args) {
+        InetAddress addr;
+        try {
+            addr = InetAddress.getLocalHost();
+            System.out.println("IP address: " + addr.getHostAddress());
+            NetworkInterface network = NetworkInterface.getByInetAddress(addr);
+            System.out.println("Mac address: " + getMacIdentifier(network));
+        } catch (UnknownHostException | SocketException e) {
             throw new RuntimeException(e);
         }
     }

@@ -1,5 +1,6 @@
 // String builder vs String
 // String append
+
 public class testForStringChange {
     public static void main(String[] args) {
         String s = new String("hello");
@@ -8,7 +9,6 @@ public class testForStringChange {
             s = s + "~~";
         long end = System.nanoTime();
         System.out.println(end - start);
-
 
         StringBuilder sb = new StringBuilder("hello");
         start = System.nanoTime();

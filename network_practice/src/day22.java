@@ -1,8 +1,5 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-
-public class day22 {
-
-}
+import java.util.*;
+import java.util.stream.Stream;
+// Square(n)Sum
+public class day22 {}
 
