@@ -2,34 +2,43 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Scanner;
+import java.util.Objects;
+import java.util.function.Supplier;
+import java.util.stream.Stream;
 
 public class SimpleEchoServer {
     public static void main(String[] args) {
-        try {
+        System.out.println("Simple Echo Server");
+        try (ServerSocket serverSocket = new ServerSocket(9900)) {
             System.out.println("Waiting for connection.....");
-            // InetAddress localAddress = InetAddress.getLocalHost();
-            try (Socket clientSocket = new Socket("165.246.115.165", 9900);
-                 PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
-                 BufferedReader br = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
-                    System.out.println("Connected to server");
-                    Scanner sc = new Scanner(System.in);
-                while (true)
-                {
-                    System.out.print("Enter text: ");
-                    String inputLine = sc.nextLine();
-                    if ("exit".equalsIgnoreCase(inputLine)) {
-                        break;  // exit condition
-                    }
-                    out.println(inputLine);  // to server
-                    String response = br.readLine();  // from server give back line to host
-                    System.out.println("Server response: " + response);
-                }
+            Socket clientSocket = serverSocket.accept();   // waiting line
+            System.out.println("Connected to client");
+            try (BufferedReader br = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+                 PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true))
+            {
+                Stream
+                        .generate(() -> {
+                            try {
+                                return br.readLine();
+                            } catch (IOException ex) {
+                                return null;
+                            }
+                        })
+                        .peek(text -> {
+                            System.out.println("클라이언트로 부터 받은 메세지 : " + text);
+                            out.println(text);
+                        })
+                        .allMatch(Objects::nonNull);
             }
-        } catch (IOException ex) {
-            // Handle exceptions
+            catch (IOException e) {
+                System.out.println("Error with connection");
+                throw new RuntimeException(e);}
         }
-
+        catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
+

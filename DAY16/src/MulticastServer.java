@@ -15,13 +15,13 @@ public class MulticastServer {
                 String dateText = new Date().toString();
                 byte[] buffer = new byte[256];
                 buffer = dateText.getBytes();
-                InetAddress group = InetAddress.getByName("224.0.0.7");
+                InetAddress group = InetAddress.getByName("224.0.0.117");
                 DatagramPacket packet;
                 packet = new DatagramPacket(buffer, buffer.length, group, 10000);
                 serverSocket.send(packet);
                 System.out.println("Time sent: " + dateText);
                 try {
-                    Thread.sleep(1000);  // cooldown 1s
+                    Thread.sleep(5000);  // cooldown 1s
                 } catch (InterruptedException ex) {
                     // Handle exception
                 }
