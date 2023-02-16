@@ -14,13 +14,103 @@ public class SocketChannelTimeClient {
             int bytesRead = sc.read(byteBuffer);
             while (bytesRead > 0) {
                 byteBuffer.flip();
+
+                // hasRemaining return false when limit is full
                 while (byteBuffer.hasRemaining())
                 {
-                    System.out.print((char)
-                            byteBuffer.get());
+                    System.out.print((char) byteBuffer.get());
+
                 }
                 System.out.println();
                 bytesRead = sc.read(byteBuffer);
+                System.out.println("Time server의 IP 주소는 " + sc.getRemoteAddress());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             }
 
         } catch (IOException e) {

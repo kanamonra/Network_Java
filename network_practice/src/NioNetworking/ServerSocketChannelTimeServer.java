@@ -26,7 +26,7 @@ public class ServerSocketChannelTimeServer {
                 // accept
                 SocketChannel socketChannel = serverSocketChannel.accept();
                 // connection is successful
-                //if (socketChannel != null) {
+                // if (socketChannel != null) {
                     String dateAndTimeMessage = "Date: " + new Date(System.currentTimeMillis());
 
                     // get bytes
