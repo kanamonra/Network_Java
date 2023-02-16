@@ -10,7 +10,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class ThreadedEchoServer implements Runnable
-{   private static Socket clientSocket;
+{   static Socket clientSocket;
 
     public ThreadedEchoServer(Socket clientSocket)
     {
