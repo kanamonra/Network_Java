@@ -23,7 +23,10 @@ public class ThreadedEchoServer implements Runnable
         try (ServerSocket serverSocket = new ServerSocket(20000)) {
             while (true) {
                 System.out.println("Waiting for connection.....");
+
+                // connected socket
                 clientSocket = serverSocket.accept();
+                // connected socket
                 ThreadedEchoServer tes = new ThreadedEchoServer(clientSocket);
                 eService.submit(tes);
             }
@@ -42,7 +45,8 @@ public class ThreadedEchoServer implements Runnable
         ) {
             String inputLine;
             while ((inputLine = br.readLine()) != null) {
-                System.out.println("Client request [" + Thread.currentThread() + "]: " + inputLine);
+                // clientSocket.get---.toString <for change the computer code to numbers>
+                System.out.println(clientSocket.getRemoteSocketAddress().toString() + "Client request [" + Thread.currentThread() + "]: " + inputLine);
                 pw.println(inputLine);
             }
             System.out.println("Client [" + Thread.currentThread() + " connection terminated");

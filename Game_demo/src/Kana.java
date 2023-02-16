@@ -6,6 +6,6 @@ public class Kana extends Character{
 
     @Override
     void info() {
-
+        System.out.println("Hero: Ceceg\nHP: " + hp + "\n" + "Mana: " + mp);
     }
 }

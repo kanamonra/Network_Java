@@ -17,7 +17,7 @@ public abstract class Character {
         fly.fly();
     }
 
-    public final void performItem(){
+    public final void performItem(Shield_items protect){
         item.useItem();
     }
 

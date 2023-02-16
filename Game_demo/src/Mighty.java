@@ -7,6 +7,6 @@ public class Mighty extends Character{
 
     @Override
     void info() {
-        System.out.println("HP: " +hp + "\n" + "MP:" + mp);
+        System.out.println("Hero: Mike\nHP: " +hp + "\n" + "MP:" + mp);
     }
 }
