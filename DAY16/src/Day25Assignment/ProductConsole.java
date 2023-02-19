@@ -1,7 +1,7 @@
 package Day25Assignment;
 
 import java.util.Scanner;
-
+// gonna extends with httpclient for choosing menu
 public class ProductConsole {
     private Scanner sc;
     public ProductConsole(){
