@@ -39,11 +39,14 @@ public class ServerSocketChannelTimeServer {
                         socketChannel.write(buf);
                     }
                     System.out.println("Sent: " + dateAndTimeMessage);
+                    serverSocketChannel.close();
 
             }
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
     }
 
 }
