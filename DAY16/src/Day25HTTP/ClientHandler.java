@@ -35,12 +35,9 @@ public class ClientHandler implements Runnable {
                 String httpQueryString = tokenizer.nextToken();
                 StringBuilder responseBuffer = new StringBuilder();
                 responseBuffer
-                        .append("<html><h1>Product Management Home Page</h1><br> <b>Welcome to product management server! ♡(｡ ❛ᴗ❛ ｡)♡</b><BR>" +
-                                "-----------------------------------------------------------------------------------------------------------</h1>" +
-                                "Product №         Name                                                    Price                      Stock"+
-                                "-----------------------------------------------------------------------------------------------------------</h1>");
-
-
+                        .append("<html><h1>WebServer Home Page.... </h1><br>")
+                        .append("<b>Welcome to my web server!</b><BR>")
+                        .append("</html>");
                 sendResponse(socket, 200, responseBuffer.toString());
             } else {
                 System.out.println("Umm... I don't understand your command ₍ᐢ. _ .ᐢ₎ ");
