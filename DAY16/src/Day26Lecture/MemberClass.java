@@ -5,10 +5,10 @@ public class MemberClass {
     // less than private more than protected
     String s = "Showing";
 
-    class memberClass {
-        String s = "inside in mc";
+    class innerclass {
+        String s = "inside in mc s";
 
-        public void show1() {
+        public void show() {
             System.out.println("member class");
             System.out.println(secret);
 
@@ -23,9 +23,9 @@ public class MemberClass {
 
     public static void main(String[] args) {
         MemberClass m = new MemberClass();
-        MemberClass.memberClass m1 = m.new memberClass();
+        innerclass m1 = m.new innerclass();
 
         System.out.println(m1.s);
-        m1.show1();
+        m1.show();
     }
 }
