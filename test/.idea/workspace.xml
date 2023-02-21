@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52cd0549-f3ad-4e55-8d9d-ebde91b8dd86" name="Changes" comment="v01">
+    <list default="true" id="52cd0549-f3ad-4e55-8d9d-ebde91b8dd86" name="Changes" comment="v02">
       <change beforePath="$PROJECT_DIR$/../Pokemon v5.0" beforeDir="false" afterPath="$PROJECT_DIR$/../Pokemon v5.0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../selfPractice" beforeDir="false" afterPath="$PROJECT_DIR$/../selfPractice" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pairi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pairi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PokemonServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PokemonServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +32,28 @@
     "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="Application.PokemonServer">
+    <configuration name="PokemonClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PokemonClient" />
+      <module name="test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PokemonServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PokemonServer" />
+      <module name="test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PokemonClient" />
+        <item itemvalue="Application.PokemonServer" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -49,11 +70,19 @@
       <option name="project" value="LOCAL" />
       <updated>1676945454494</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="v02">
+      <created>1676946049592</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676946049592</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v01" />
-    <option name="LAST_COMMIT_MESSAGE" value="v01" />
+    <MESSAGE value="v02" />
+    <option name="LAST_COMMIT_MESSAGE" value="v02" />
   </component>
 </project>
