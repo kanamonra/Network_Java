@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52cd0549-f3ad-4e55-8d9d-ebde91b8dd86" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../DAY16/src/Day26Lecture/SocketChannelTimeClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DAY16/src/Day26Lecture/SocketChannelTimeServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DAY16/src/ThreadMultiJava8Echo/Java8SimpleEchoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DAY16/src/ThreadMultiJava8Echo/Java8SimpleEchoClient.java" afterDir="false" />
+    <list default="true" id="52cd0549-f3ad-4e55-8d9d-ebde91b8dd86" name="Changes" comment="v01">
       <change beforePath="$PROJECT_DIR$/../Pokemon v5.0" beforeDir="false" afterPath="$PROJECT_DIR$/../Pokemon v5.0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../selfPractice" beforeDir="false" afterPath="$PROJECT_DIR$/../selfPractice" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pairi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pairi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PokemonServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PokemonServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +42,18 @@
       <option name="presentableId" value="Default" />
       <updated>1676943141606</updated>
     </task>
+    <task id="LOCAL-00001" summary="v01">
+      <created>1676945454494</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676945454494</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="v01" />
+    <option name="LAST_COMMIT_MESSAGE" value="v01" />
   </component>
 </project>
