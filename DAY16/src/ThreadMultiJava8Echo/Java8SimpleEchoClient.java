@@ -12,7 +12,9 @@ public class Java8SimpleEchoClient
     public static void main(String[] args) {
         System.out.println("에코 클라이언트 시작됨");
         //InetAddress localAddr = InetAddress.getLocalHost();  // 127.0.0.1
-        try (Socket clientSocket = new Socket("165.246.115.165", 20000); PrintWriter pw = new PrintWriter(clientSocket.getOutputStream(), true); BufferedReader br = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
+        try (Socket clientSocket = new Socket("165.246.115.165", 20000);
+             PrintWriter pw = new PrintWriter(clientSocket.getOutputStream(), true);
+             BufferedReader br = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
 
             System.out.println("서버에 연결됨");
             Scanner sc = new Scanner(System.in);
